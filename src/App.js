@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.scss';
+
+import Header from './components/Header/Header';
+
+import Dashboard from './containers/Dashboard/Dashboard';
+import Instances from './containers/Instances/Instances';
+import Pairs from './containers/Pairs/Pairs';
+import About from './containers/About/About';
+import Help from './containers/Help/Help';
+import Contact from './containers/Contact/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      
+      <Switch>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/instances" component={Instances} />
+        <Route path="/pairs" component={Pairs} />
+        <Route path="/about" component={About} />
+        <Route path="/help" component={Help} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </React.Fragment>
   );
 }
 
