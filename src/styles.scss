@@ -149,10 +149,9 @@ span, p {
         }
 
         .btn-primary {
+            width: 150px;
             background-color: $purple-color;
             border-color: $purple-color;
-            padding-left: 30px;
-            padding-right: 30px;
             border-radius: 15px;
 
             &:hover {
@@ -163,6 +162,7 @@ span, p {
 }
 
 .table {
+    font-size: 12px;
 
     thead th {
         font-weight: normal;
