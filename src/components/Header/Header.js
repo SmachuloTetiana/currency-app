@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar navbar-expand-sm navbar-dark mb-4">
-                <a href="/" className="navbar-brand">Forcelate</a>
+                <a href="/" className="navbar-brand">Forcelate Test Task</a>
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                         <NavLink 

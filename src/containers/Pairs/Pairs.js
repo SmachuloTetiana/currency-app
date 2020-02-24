@@ -2,9 +2,15 @@ import React from 'react';
 
 const Pairs = () => {
     return (
-        <div>
-            Pairs
-        </div>
+        <section className="container-fluid">
+            <div className="row">
+                <div className="col">
+                    <div className="bg-primary">
+                        Pairs
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 }
 
