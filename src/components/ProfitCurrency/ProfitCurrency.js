@@ -15,7 +15,7 @@ const ProfitCurrency = ({ options, selectedOption, onChange }) => {
                     defaultValue={{value: selectedOption.value, label: selectedOption.label}} 
                     onChange={onChange} />
 
-                <span>Selected currency will affect all prifit in dashboard</span>
+                <span>Selected currency will affect all profit in dashboard</span>
             </div>
         </div>
     )

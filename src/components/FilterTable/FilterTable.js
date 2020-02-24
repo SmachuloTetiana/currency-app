@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FilterTable = ({ tableValues, calculatePrice }) => {
+const FilterTable = ({ tableValues, calculatePriceByCurrency }) => {
     return (
         <div className="toolbar bg-primary">
             <div className="toolbar__settings">
@@ -14,7 +14,7 @@ const FilterTable = ({ tableValues, calculatePrice }) => {
 
                     <div className="form-group mr-2">
                         <label htmlFor="currency">Buy advice currency</label>
-                        <input className="form-control" type="text" name="currency" />
+                        <input className="form-control" type="text" name="currency"/>
                     </div>
 
                     <div className="form-group mr-2">
@@ -53,12 +53,12 @@ const FilterTable = ({ tableValues, calculatePrice }) => {
                         tableValues.map((el, key) => (
                             <tr key={key}>
                                 <td>{el.buyExchange}</td>
-                                <td>{calculatePrice(el.buyPrice)}</td>
+                                <td>{calculatePriceByCurrency(el.buyPrice)}</td>
                                 <td>{el.sellExchange}</td>
-                                <td>{calculatePrice(el.sellPrice)}</td>
+                                <td>{calculatePriceByCurrency(el.sellPrice)}</td>
                                 <td>{el.tradeAmount}</td>
                                 <td>{el.arbFree}</td>
-                                <td>{el.expPofit}</td>
+                                <td>{el.expProfit}</td>
                                 <td>{el.expFees}</td>
                                 <td>{el.adj}</td>
                             </tr>

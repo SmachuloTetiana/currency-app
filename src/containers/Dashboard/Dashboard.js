@@ -13,7 +13,7 @@ const Dashboard = () => {
             sellPrice: 0.334,
             tradeAmount: 353.3,
             arbFree: '1.01%[0.15%]',
-            expPofit: 1,
+            expProfit: 1,
             expFees: 0.2,
             adj: null
         },
@@ -24,7 +24,7 @@ const Dashboard = () => {
             sellPrice: 69.57002,
             tradeAmount: 2.1449,
             arbFree: '0.27%[0.15%]',
-            expPofit: 0.2,
+            expProfit: 0.2,
             expFees: 0.2,
             adj: null
         },
@@ -35,7 +35,7 @@ const Dashboard = () => {
             sellPrice: 0.334,
             tradeAmount: 353.3,
             arbFree: '1.01%[0.15%]',
-            expPofit: 1,
+            expProfit: 1,
             expFees: 0.2,
             adj: null
         },
@@ -46,7 +46,7 @@ const Dashboard = () => {
             sellPrice: 69.57002,
             tradeAmount: 2.1449,
             arbFree: '0.27%[0.15%]',
-            expPofit: 0.2,
+            expProfit: 0.2,
             expFees: 0.2,
             adj: null
         },
@@ -57,13 +57,13 @@ const Dashboard = () => {
             sellPrice: 0.334,
             tradeAmount: 353.3,
             arbFree: '1.01%[0.15%]',
-            expPofit: 1,
+            expProfit: 1,
             expFees: 0.2,
             adj: null
         },
     ];
 
-    const calculatePrice = price => {
+    const calculatePriceByCurrency = price => {
         switch(selectedOption.value) {
             case 'eur':
             return (price * 0.8).toFixed(2);
@@ -95,7 +95,7 @@ const Dashboard = () => {
         label: options[0].label
     });
 
-    const handleChange = selectedOption => {
+    const handleCurrencyChange = selectedOption => {
         setSelectedOption({
             value: selectedOption.value,
             label: selectedOption.label
@@ -106,13 +106,13 @@ const Dashboard = () => {
         <section className="container-fluid">
             <div className="row">
                 <div className="col-lg-8 col-12">
-                    <FilterTable tableValues={tableValues} calculatePrice={calculatePrice} />
+                    <FilterTable tableValues={tableValues} calculatePriceByCurrency={calculatePriceByCurrency} />
                 </div>
 
                 <div className="col-lg-4">
                     <div className="row">
                         <div className="col-12 pl-lg-0 mt-lg-0 mt-3">
-                            <ProfitCurrency options={options} selectedOption={selectedOption} onChange={handleChange}/>
+                            <ProfitCurrency options={options} selectedOption={selectedOption} onChange={handleCurrencyChange}/>
                         </div>
                     </div>
                     <div className="row">
